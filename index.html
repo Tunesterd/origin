@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--Project Tunester is purely for educational purpose, it is a part of a school project. The service will be stopped after the applications serving capacity is reached. It is still a work in progress. Project Tunester has nothing to deal with the content that has been searched or downloaded using the service of Tunester. User's are themeselves responsible for the content they download through the service provided by Project Tunester. WE DO NOT RECORD ANY USER DATA FOR ANY PURPOSE-->
+<html>
+<head>
+    <!--Meta tags for web scrapper-->
+    <META http-equiv="X-UA-Compatible" content="IE=edge">
+    <META name="viewport" content="width=device-width, initial-scale=1">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META NAME="Title" CONTENT="Tunester">
+    <META NAME="Keywords" CONTENT="mp3, download, youtube, free download, manojitballav, manojit, ballav, mono">
+    <META NAME="Description" CONTENT="Download quality mp3 tunes from Youtube directly without the hassle of copy pasting the link. To plugin to install no surveys to pass. Just search and download">
+    <META NAME="Author" CONTENT="Developed by Manojit Ballav">
+    <META NAME="Subject" CONTENT="Search">
+    <META NAME="Language" CONTENT="English">
+        
+    <!--Google Web Crawlers-->
+    <meta name="googlebot" content="nofollow">
+    <meta name="google" content="notranslate">
+    
+
+    <!--Open Graph Meta tags-->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tunester : Download your favourite mp3 tunes !">
+    <meta property="og:description" content="Let's you download mp3 along with all its ID3 tags, no more hassle and link copy/paste. Single Click download">
+    <meta property="og:image" content="http://tunester.ml/images/og.jpg">
+    <meta property="og:url" content="http://tunester.ml">
+    <meta property="fb:app_id" content=""> <!-- Enter your fb app id here -->
+    <!--Title-->
+    <title>Tunester</title>
+    
+    <!--Adding favicon-->
+    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico">
+        
+    <!--Loading Bootstrap earlier-->
+    <link href='css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    
+    <!--Loading custom stylesheet-->
+    <link rel="stylesheet" href="css/styles.css"/>
+    
+    
+    <!--Loading google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <style type="text/css">
+        /* Hide AddToAny vertical share bar when screen is less than 980 pixels wide */
+        @media screen and (max-width: 980px) {
+            .a2a_floating_style.a2a_vertical_style { display: none; }
+        }
+    </style>
+
+    <!--Custom Analytics Tracking code-->
+
+    <!-- End Analytics Code -->
+
+</head>
+
+<body>
+    <div id="wrap">
+        
+        <!--Navigation Bar-->
+        <header>
+            <nav id="header-nav" class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class='navbar-header'>
+                        <span class="navbar-brand">
+                            <!--Navigation bar logo-->
+				            <a href="index.html"><img src="images/nvalogo.png" height="55"></a>
+                        </span>
+                        <!--Search form, in the naviagtion bar-->
+                        <form class="navbar-form" action="javascript:void(0);">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter artist/song name" onkeypress="handle(event)">
+                                <span class="input-group-btn">
+                                   <button type="button" id="search2" class="btn btn-default">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>                       
+                    <div id="collapsble-nav" class="collapse navbar-collapse">
+                        <ul id="nav-list" class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="works/index.html" class='text-center' id="about">Chronicle</a>
+                            </li>
+                            <li>
+                                <a href="privacypolicy.htm" class='text-center' id="about">Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!--Main Content-->
+        <div class="container">
+            <div class="mainContent">
+                <div id="search" class='text-center'>
+                    <a href="http://tunester.ml"><img class='img-responsive' id='mainLogo' src="images/logo.png" alt="Tunester"></a>
+                    <input class="searchInput" type="text"  placeholder="Enter artist/song name" onkeypress="handle(event)" disabled="true">
+                    <button type="button" class="searchButton" disabled="true"><i class="fa fa-search" aria-hidden="true"></i>Search</button> 
+                </div>
+                <div id="display"></div>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">×</span>
+                            <h3></h3>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <a class="btn popDownload" href="">Download</a>
+                            <button class="btn" type="button" id="cancel">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!--Flushing the footer to the bottom-->
+    <div id="push"></div>
+    
+    <!--Footer-->
+    <div id="footer">
+        <div class="container text-center devInfo">
+            <h6>Open Source Project by MONO</h6>
+            <!--Adding Copyright icon-->
+            <a href="http://www.copyscape.com/"><img src="http://banners.copyscape.com/img/copyscape-banner-white-200x25.png" width="200" height="25" border="0" alt="Protected by Copyscape" title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page." /></a>
+        </div>
+    </div>
+    
+    <!--Loading fontawesome-->
+    <script src="scripts/60999a0f55.js"></script>
+    <!--Loading jQuery-->
+    <script src="scripts/jquery-2.2.4.min.js"></script>
+    <!--Loading Bootstrap-->
+    <script src="scripts/bootstrap.min.js"></script>
+    <!--Custom Javascript-->
+    <script src="scripts/script.js" type="text/javascript"></script>
+    <!--Loading Google API-->
+    <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
+    
+</body>
+
+    
+<!--Google Analytics Script-->
+
+
+<!-- End of Google Analytics Script -->
+    
+    
+<!-- Add push notifications script here -->
+
+
+<!-- End of push notification script -->
+</html>
